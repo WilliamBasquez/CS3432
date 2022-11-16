@@ -1,4 +1,4 @@
-multiply_unsigned:
+multiply_unsigned: 
 	# a0 = 'a', a1 = 'b'
 	addi  sp, sp, -32							                # Move stack pointer up (to lower addresses)
 	sw    ra, 28(sp)								              # Store return_addr on stack
