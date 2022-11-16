@@ -1,10 +1,10 @@
 multiply_unsigned: 
 	# a0 = 'a', a1 = 'b'
-	addi  sp, sp, -32							                # Move stack pointer up (to lower addresses)
-	sw    ra, 28(sp)								              # Store return_addr on stack
-	sw    s0, 24(sp)								              # Store frame pointer on stack
-	addi  s0, sp, 32								              # Set frame pointer to stack pointer of caller
-	mv    a2, x0	                                # Set a2 to 0; a2 will be res
+	addi  sp, sp, -32                             # Move stack pointer up (to lower addresses)
+	sw    ra, 28(sp)                              # Store return_addr on stack
+	sw    s0, 24(sp)                              # Store frame pointer on stack
+	addi  s0, sp, 32                              # Set frame pointer to stack pointer of caller
+	mv    a2, x0                                  # Set a2 to 0; a2 will be res
 	# lw a4, a0	# ta will be in a4; UPDATE: There's no need to load things, we can use a and b as they are
 	# lw a5, a1	# tb will be in a4 [SAME AS ABOVE LINE]
 	mv    a3, x0	                                # set a3 (i) to 0
