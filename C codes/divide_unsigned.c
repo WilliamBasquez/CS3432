@@ -29,4 +29,6 @@ void divide_unsigned(unsigned int *quot, unsigned int *rem, unsigned int a, unsi
             r -= b;
         }
     }
+    *quot = q;
+    *rem = r;
 }
